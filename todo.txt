@@ -1,0 +1,4 @@
+1. Make the dish detail into it's own component and pass it in as a prop. Dish
+detail is at the bottom DONE
+
+2. comments need to be shown at the bottom. 
