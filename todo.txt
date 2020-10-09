@@ -1,4 +1,4 @@
-1. Make the dish detail into it's own component and pass it in as a prop. Dish
-detail is at the bottom DONE
-
-2. comments need to be shown at the bottom. 
+Things I've learned:
+- user defined UI (AKA functional components) needs to be capitalized and called as react components. Ex: <RenderComments />
+- how react uses a virtual dom. uses a diffing algorithm that was updated to react fiber in version 16
+- use fragment because it doesn't add an extra node element into the dom. a div does
