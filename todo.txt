@@ -2,3 +2,4 @@ Things I've learned:
 - user defined UI (AKA functional components) needs to be capitalized and called as react components. Ex: <RenderComments />
 - how react uses a virtual dom. uses a diffing algorithm that was updated to react fiber in version 16
 - use fragment because it doesn't add an extra node element into the dom. a div does
+- single page applications (SPA) download most of the web page on the initial load, have UX similar to native app or desktop app, redraw parts of page when needed without requiring a full server roundtrip.
