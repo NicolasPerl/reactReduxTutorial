@@ -3,3 +3,17 @@ Things I've learned:
 - how react uses a virtual dom. uses a diffing algorithm that was updated to react fiber in version 16
 - use fragment because it doesn't add an extra node element into the dom. a div does
 - single page applications (SPA) download most of the web page on the initial load, have UX similar to native app or desktop app, redraw parts of page when needed without requiring a full server roundtrip.
+
+
+
+
+Assignment 3: 
+- Task 1: 
+-- CommentFormComponent.js and render it in <DishDetail />
+-- when button clicked a modal appears
+
+- Task 2: 
+-- Configure the form in the modal
+
+- Task 3:
+-- Add form validation to the author name

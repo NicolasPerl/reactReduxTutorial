@@ -19,10 +19,6 @@ const RenderDish = ({dish, onClick}) => {
 }
 
 const Menu = (props) => {
-  // reminder: return component from funtion
-  const renderDish = (dish) => {
-    return <DishDetail dish = {dish} />
-  }
   const menu = props.dishes.map((dish => {
     return (
       <div key={dish.id} className="col-12 col-md-5 mt-1">

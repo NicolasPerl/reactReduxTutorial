@@ -1,6 +1,8 @@
-import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, ListGroup, ListGroupItem,Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import React, { useState } from 'react';
+import { Card, CardImg, CardText, CardBody, CardTitle, ListGroup, ListGroupItem,Breadcrumb, Button, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentFormComponent'
+import useToggle from '../hooks/useToggle'
 
 const RenderDish = ({dish}) => {
   return (
@@ -16,6 +18,8 @@ const RenderDish = ({dish}) => {
 
 
 const DishDetail = (props) => {
+  const [isOpen, toggleModal] = useToggle()
+
   if (props.dish != null) {
     return(
       <div className="container">
@@ -37,6 +41,10 @@ const DishDetail = (props) => {
             <h4>Comments:</h4>
               {/* if there are comments render comments */}
               {props.comments && <RenderComments comments={props.comments} />}
+              <Button outline onClick={toggleModal}>
+                <span className="fa fa-sign-in fa-lg">Submit Comment</span>
+              </Button>
+              <CommentForm isOpen={isOpen} toggleModal={toggleModal}/>
           </div>
         </div>
       </div>
