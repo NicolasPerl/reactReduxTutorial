@@ -9,12 +9,10 @@ const minLength = (len) => (val) => (val) && (val.length >= len)
 const isNumber = (val) => !isNaN(Number(val))
 const validEmail = (val) => /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(val);
 
-const handleSubmit = (values) => {
-  console.log(`Current status: ${JSON.stringify(values)}`)
-  alert(`Current status: ${JSON.stringify(values)}`);
-}
-
 function CommentForm(props) {
+  const handleSubmit = (values) => {
+    props.addComment(props.dishId, '2', 'nicolas perlick', 'this is my comment')
+  }
   return (
     <Modal isOpen={props.isOpen} toggle={props.toggleModal}>
       <ModalHeader toggle={props.toggleModal}>Comment</ModalHeader>

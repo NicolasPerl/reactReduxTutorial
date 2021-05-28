@@ -44,7 +44,7 @@ const DishDetail = (props) => {
               <Button outline onClick={toggleModal}>
                 <span className="fa fa-sign-in fa-lg">Submit Comment</span>
               </Button>
-              <CommentForm isOpen={isOpen} toggleModal={toggleModal}/>
+              <CommentForm isOpen={isOpen} toggleModal={toggleModal} dishId={props.dish.id} addComment={props.addComment}/>
           </div>
         </div>
       </div>
